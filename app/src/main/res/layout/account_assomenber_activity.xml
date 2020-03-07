@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical" android:background="@drawable/fond">
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Membre"
+        android:textColorHint="#000"
+        android:textSize="25dp"
+        android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+
+    <EditText
+        android:background="@drawable/edittext_style"
+        android:layout_marginTop="50dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/nom"
+        android:hint="Nom"
+        android:paddingLeft="10dp"
+        android:textColorHint="#000"
+        android:textSize="22dp"/>
+
+    <EditText
+        android:background="@drawable/edittext_style"
+        android:layout_width="250dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="50dp"
+        android:id="@+id/prenom"
+        android:hint="Prenom"
+        android:paddingLeft="10dp"
+        android:textColorHint="#000"
+        android:textSize="22dp"/>
+
+    <EditText
+        android:background="@drawable/edittext_style"
+        android:layout_marginTop="30dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/adresse"
+        android:hint="Adresse"
+        android:paddingLeft="10dp"
+        android:textColorHint="#000"
+        android:textSize="22dp"/>
+
+    <EditText
+        android:background="@drawable/edittext_style"
+        android:layout_marginTop="30dp"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:id="@+id/telephone"
+        android:hint="Téléphone"
+        android:paddingLeft="10dp"
+        android:textColorHint="#000"
+        android:textSize="22dp"/>
+
+    <Button
+        android:onClick="Valider"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:text="Valider"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button_background"/>
+
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

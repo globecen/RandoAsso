@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.test">
+
+    <!--Internet Permission-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".account_asso_activity"
+            android:label="Compte association"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity android:name=".account_assomenber_activity"
+            android:label="Membre association"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".asso_main_activity"
+            android:label="Activité principale"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".randomember_valid_event_activity"
+            android:label="RandoJoelette (Validation Rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".randomember_main_activity"
+            android:label="RandoJoelette"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".assomember_main_activity"
+            android:label="RandoJoelette"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".handiassomember_main_activity"
+            android:label="RandoJoelette"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".asso_add_event_activity"
+            android:label="RandoJoelette (Créer Rando )"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".assomember_valid_event_activity"
+            android:label="RandoJoelette (Validation Rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".handiassomember_valid_event_activity"
+            android:label="RandoJoelette (Validation Rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".asso_read_active_event_activity"
+            android:label="RandoJoelette (Rando active)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".randomember_read_active_event_activity"
+            android:label="RandoJoelette (Mes rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".assomember_read_active_event_activity"
+            android:label="RandoJoelette (Mes rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".handiassomember_read_active_event_activity"
+            android:label="RandoJoelette (Mes rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".asso_modify_event_activity"
+            android:label="RandoJoelette (Modifié Rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".randomember_modify_event_activity"
+            android:label="RandoJoelette (Modifié Rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".assomember_modify_event_activity"
+            android:label="RandoJoelette (Modifié Rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+
+        <activity android:name=".handiassomember_modify_event_activity"
+            android:label="RandoJoelette (Modifié Rando)"
+            android:parentActivityName=".account_asso_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".account_asso_activity"/>
+        </activity>
+    </application>
+
+</manifest>
