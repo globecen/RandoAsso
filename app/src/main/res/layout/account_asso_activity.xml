@@ -42,7 +42,7 @@
             android:layout_marginTop="30dp"
             android:layout_height="50dp"
             android:id="@+id/nompresident"
-            android:hint="Nom du prédident"
+            android:hint="Nom du président"
             android:paddingLeft="10dp"
             android:textColorHint="#000"
             android:textSize="22dp"/>

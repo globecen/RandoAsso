@@ -1,7 +1,9 @@
 package com.example.test;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -67,5 +69,8 @@ public class randomember_main_activity extends AppCompatActivity {
                 Log.e("erreur",t.getMessage());
             }
         });
+    }
+    public void VoirPlus (View view) {
+        startActivity(new Intent(this, randomember_read_active_event_activity.class));
     }
 }
