@@ -72,5 +72,6 @@ public class randomember_main_activity extends AppCompatActivity {
     }
     public void VoirPlus (View view) {
         startActivity(new Intent(this, randomember_read_active_event_activity.class));
+
     }
 }

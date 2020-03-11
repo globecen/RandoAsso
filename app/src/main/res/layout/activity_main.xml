@@ -21,38 +21,43 @@
            android:layout_marginTop="120dp"
            android:layout_width="250dp"
            android:layout_height="50dp"
-           android:id="@+id/identifiant"
-           android:hint="Identifiant"
+           android:id="@+id/etIdentifiant"
+           android:hint="votre@adresse.fr"
            android:paddingLeft="10dp"
+           android:inputType="textEmailAddress"
            android:textColorHint="#000"
            android:textSize="22dp"/>
 
-       <EditText
-           android:background="@drawable/edittext_style"
-           android:layout_marginTop="20dp"
-           android:layout_width="250dp"
-           android:layout_height="50dp"
-           android:id="@+id/mdp"
-           android:hint="Mot de passe"
-           android:paddingLeft="10dp"
-           android:textColorHint="#000"
-           android:textSize="22dp"/>
+        <EditText
+            android:id="@+id/etMdp"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_style"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
 
-       <Button
-           android:onClick="Valider"
-           android:layout_width="130dp"
-           android:layout_height="40dp"
-           android:text="Valider"
-           android:layout_marginTop="60dp"
-           android:background="@drawable/button_background"/>
+        <Button
+            android:id="@+id/btnValid"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_background"
+            android:onClick="Valider"
+            android:text="Valider" />
 
-       <Button
-           android:onClick="CreerCompte"
-           android:layout_width="180dp"
-           android:layout_height="40dp"
-           android:text="Creer un compte"
-           android:layout_marginTop="30dp"
-           android:background="@drawable/buttoncreer_background"/>
+        <Button
+            android:id="@+id/btnCreer"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttoncreer_background"
+            android:onClick="CreerCompte"
+            android:text="Creer un compte" />
 
 
    </LinearLayout>

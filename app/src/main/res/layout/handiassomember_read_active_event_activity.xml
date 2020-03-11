@@ -39,7 +39,7 @@
             android:inputType="date"
             android:textSize="25dp"
             android:hint=" Date"
-            android:id="@+id/date"
+            android:id="@+id/etDate"
             android:textAppearance="@style/Theme.AppCompat.Dialog"/>
 
 
@@ -51,7 +51,7 @@
             android:inputType="textPostalAddress"
             android:textSize="22dp"
             android:hint=" Lieu"
-            android:id="@+id/lieu"
+            android:id="@+id/etLieu"
             android:textAppearance="@style/Theme.AppCompat.Dialog"/>
 
 
@@ -63,7 +63,7 @@
             android:inputType="number"
             android:textSize="22dp"
             android:hint=" Nb de participant"
-            android:id="@+id/nbparticipant"
+            android:id="@+id/etNbParticipant"
             android:textAppearance="@style/Theme.AppCompat.Dialog"/>
 
 
@@ -75,7 +75,7 @@
             android:inputType="date"
             android:textSize="22dp"
             android:hint=" Date d'échéance"
-            android:id="@+id/echeance"
+            android:id="@+id/etDateEcheance"
             android:textAppearance="@style/Theme.AppCompat.Dialog"/>
 
         <TextView
