@@ -81,11 +81,10 @@ System.out.println(finalURL);
                             Intent i = new Intent(account_assomenber_activity.this,
                                     MainActivity.class);
                             startActivity(i);
-                            finish();
                         } else if (result.equalsIgnoreCase("User already exists")) {
-                            showToast("User already exists");
+                            showToast("Compte deja existant");
                         } else {
-                            showToast("oop! please try again");
+                            showToast("errer");
                         }
                     }
                 } catch (Exception e) {
@@ -108,5 +107,9 @@ System.out.println(finalURL);
                         Text, Toast.LENGTH_LONG).show();
             }
         });
+    }
+    public void onResume(){
+        super.onResume();
+
     }
 }

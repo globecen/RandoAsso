@@ -12,4 +12,8 @@ public class randomember_valid_event_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.randomember_valid_event_activity);
     }
+    public void onResume(){
+        super.onResume();
+
+    }
 }

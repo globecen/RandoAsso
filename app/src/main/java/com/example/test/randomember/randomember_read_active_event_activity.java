@@ -58,5 +58,9 @@ public class randomember_read_active_event_activity extends AppCompatActivity {
                 }
             });
         }
+    public void onResume(){
+        super.onResume();
+
+    }
     }
 

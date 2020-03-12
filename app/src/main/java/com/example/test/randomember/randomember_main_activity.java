@@ -85,12 +85,13 @@ public class randomember_main_activity extends AppCompatActivity {
                         Intent i = new Intent(randomember_main_activity.this,
                                 randomember_read_active_event_activity.class);
                         i.putExtra("norando", rando.getNo_randonnee());
-
                         startActivity(i);
-                        finish();
                     }
 
                 });
+    }
+    public void onResume(){
+        super.onResume();
     }
 
 }

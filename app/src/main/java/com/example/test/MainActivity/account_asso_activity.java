@@ -20,5 +20,8 @@ public class account_asso_activity extends AppCompatActivity {
     public void Valider (View view) {
         startActivity(new Intent(this, account_assomenber_activity.class));
     }
+    public void onResume(){
+        super.onResume();
 
+    }
 }

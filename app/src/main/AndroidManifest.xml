@@ -164,6 +164,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity.account_asso_activity"/>
         </activity>
+
     </application>
 
 </manifest>
