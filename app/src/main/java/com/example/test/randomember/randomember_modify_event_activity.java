@@ -1,8 +1,10 @@
-package com.example.test;
+package com.example.test.randomember;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.test.R;
 
 public class randomember_modify_event_activity extends AppCompatActivity {
 

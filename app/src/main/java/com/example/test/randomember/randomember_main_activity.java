@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.randomember;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.test.Interfaces.RandonneeRequeteInterface;
+import com.example.test.MainActivity.MainActivity;
+import com.example.test.R;
 import com.example.test.adapters.RandonneeAdapter;
 import com.example.test.models.RandonneeeModel;
+import com.example.test.utils.ItemClickSupport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +30,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class randomember_main_activity extends AppCompatActivity {
     ArrayList<RandonneeeModel> randonneeModels=new ArrayList<>();
     private TextView raondonnee_no,raondonnee_lieu;
+
     private RandonneeAdapter radonneAdapter;
     private RecyclerView randonneee_recyclerview;
     protected void onCreate (Bundle savedInstanceState) {
@@ -40,6 +44,7 @@ public class randomember_main_activity extends AppCompatActivity {
 
         randonneee_recyclerview.setLayoutManager(new LinearLayoutManager(this));
         getRandoneeeResponse();
+        this.configureOnClickRecyclerView();
 
     }
     private void getRandoneeeResponse() {
@@ -59,7 +64,6 @@ public class randomember_main_activity extends AppCompatActivity {
                 radonneAdapter=new RandonneeAdapter(randomember_main_activity.this,randonneeModels);
                 randonneee_recyclerview.setAdapter(radonneAdapter);
                 Toast.makeText(randomember_main_activity.this,"Success",Toast.LENGTH_SHORT).show();
-                System.out.println("cc2");
             }
 
             @Override
@@ -70,8 +74,23 @@ public class randomember_main_activity extends AppCompatActivity {
             }
         });
     }
-    public void VoirPlus (View view) {
-        startActivity(new Intent(this, randomember_read_active_event_activity.class));
+    private void configureOnClickRecyclerView(){
+        ItemClickSupport.addTo(randonneee_recyclerview, R.layout.randomember_main_activity)
+                .setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+                    @Override
+                    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                        RandonneeeModel rando = radonneAdapter.getRando(position);
+                        Toast.makeText(getApplicationContext(), "Vous avez cliquez sur la randonne n° : "+rando.getNo_randonnee(), Toast.LENGTH_SHORT).show();
+                        //startActivity(new Intent(randomember_read_active_event_activity.class));
+                        Intent i = new Intent(randomember_main_activity.this,
+                                randomember_read_active_event_activity.class);
+                        i.putExtra("norando", rando.getNo_randonnee());
 
+                        startActivity(i);
+                        finish();
+                    }
+
+                });
     }
+
 }

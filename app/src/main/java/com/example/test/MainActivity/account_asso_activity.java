@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.MainActivity;
 
 
 import android.content.Intent;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.test.MainActivity.account_assomenber_activity;
+import com.example.test.R;
 
 public class account_asso_activity extends AppCompatActivity {
 

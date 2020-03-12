@@ -4,83 +4,92 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".MainActivity">
-
-<LinearLayout
-    android:layout_width="fill_parent" android:layout_height="fill_parent"
-    android:orientation="vertical" android:background="@drawable/fond">
+tools:context=".MainActivity.MainActivity">
 
 
-</LinearLayout>
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_marginTop="70dp"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Membre"
-        android:textColorHint="#000"
-        android:textSize="25dp"
-        android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+        android:background="@drawable/fond"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:background="@drawable/edittext_style"
-        android:layout_marginTop="50dp"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:id="@+id/nom"
-        android:hint="Nom"
-        android:paddingLeft="10dp"
-        android:textColorHint="#000"
-        android:textSize="22dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="Membre"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"
+            android:textColorHint="#000"
+            android:textSize="25dp" />
 
-    <EditText
-        android:background="@drawable/edittext_style"
-        android:layout_width="250dp"
-        android:layout_marginTop="30dp"
-        android:layout_height="50dp"
-        android:id="@+id/prenom"
-        android:hint="Prenom"
-        android:paddingLeft="10dp"
-        android:textColorHint="#000"
-        android:textSize="22dp"/>
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="256dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/edittext_style"
+            android:hint="email"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
 
-    <EditText
-        android:background="@drawable/edittext_style"
-        android:layout_marginTop="30dp"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:id="@+id/adresse"
-        android:hint="Adresse"
-        android:paddingLeft="10dp"
-        android:textColorHint="#000"
-        android:textSize="22dp"/>
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_style"
+            android:hint="Mot de passe"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
 
-    <EditText
-        android:background="@drawable/edittext_style"
-        android:layout_marginTop="30dp"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:id="@+id/telephone"
-        android:hint="Téléphone"
-        android:paddingLeft="10dp"
-        android:textColorHint="#000"
-        android:textSize="22dp"/>
+        <EditText
+            android:id="@+id/etNom"
+            android:layout_width="267dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_style"
+            android:hint="nom"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
 
-    <Button
-        android:onClick="Valider"
-        android:layout_width="130dp"
-        android:layout_height="40dp"
-        android:text="Valider"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/button_background"/>
+        <EditText
+            android:id="@+id/etPrenom"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_style"
+            android:hint="Prenom"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/etAdresse"
+            android:layout_width="274dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_style"
+            android:hint="Adresse"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/btnValid"
+            android:layout_width="118dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_background"
+
+            android:text="Valider" />
 
 
-</LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

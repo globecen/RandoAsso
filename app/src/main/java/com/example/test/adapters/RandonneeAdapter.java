@@ -1,7 +1,6 @@
 package com.example.test.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,8 +35,8 @@ public class RandonneeAdapter extends RecyclerView.Adapter<RandonneeAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull RandonneeAdapter.ViewHolder viewHolder, int i) {
-        viewHolder.raondonnee_no.setText(randonneeModels.get(i).getNo_randonnee());
-        viewHolder.raondonnee_lieu.setText(randonneeModels.get(i).getLieu());
+        viewHolder.raondonnee_no.setText(randonneeModels.get(i).getLieu());
+        viewHolder.raondonnee_lieu.setText(randonneeModels.get(i).getDate());
 
     }
 
@@ -53,5 +52,8 @@ public class RandonneeAdapter extends RecyclerView.Adapter<RandonneeAdapter.View
             raondonnee_no=(TextView) itemView.findViewById(R.id.randonneeno);
             raondonnee_lieu=(TextView)itemView.findViewById(R.id.randonneelieu);
         }
+    }
+    public RandonneeeModel getRando(int position){
+        return this.randonneeModels.get(position);
     }
 }

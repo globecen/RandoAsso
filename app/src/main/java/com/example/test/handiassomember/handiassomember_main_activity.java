@@ -1,8 +1,10 @@
-package com.example.test;
+package com.example.test.handiassomember;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.test.R;
 
 public class handiassomember_main_activity extends AppCompatActivity{
 

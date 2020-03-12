@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.MainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.test.R;
+import com.example.test.randomember.randomember_main_activity;
 
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
