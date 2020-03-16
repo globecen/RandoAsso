@@ -22,16 +22,16 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:layout_marginTop="70dp"
+            android:id="@+id/membre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Les randonnées disponibles"
-            android:textColorHint="#000"
-            android:textSize="25dp"
-            android:id="@+id/membre"
-            android:textStyle="bold"
+            android:layout_marginTop="70sp"
             android:autoLink="web"
-            android:textAppearance="@style/Theme.AppCompat.Dialog"/>
+            android:text="@string/AllRando"
+            android:textAppearance="@style/Theme.AppCompat.Dialog"
+            android:textColorHint="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
         <LinearLayout
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
             android:background="@color/transparent">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/randonnee_recyclerview"
+                android:id="@+id/myRandonnee_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 

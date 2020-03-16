@@ -37,7 +37,7 @@ public class randomember_read_active_event_activity extends AppCompatActivity {
 
         private void getRandoneeeResponse() {
             Retrofit retrofit=new Retrofit.Builder()
-                    .baseUrl("http://globecen.freeboxos.fr:8080")
+                    .baseUrl("https://globecen.freeboxos.fr")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             RandonneeInterface requestInteface=retrofit.create(RandonneeInterface.class);

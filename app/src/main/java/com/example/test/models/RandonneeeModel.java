@@ -13,23 +13,19 @@ public class RandonneeeModel {
     @SerializedName("lieu")
     @Expose
     private String lieu;
-    @SerializedName("nombremini")
+    @SerializedName("nombreMini")
     @Expose
-    private int nombremini;
-    @SerializedName("nombremax")
+    private int nombreMini;
+    @SerializedName("dateMaxRep")
     @Expose
-    private int nombremax;
-    @SerializedName("datemaxrep")
-    @Expose
-    private String datemaxrep;
+    private String dateMaxRep;
 
-    public RandonneeeModel(String no_randonnee, String date, String lieu, int nombremini, int nombremax, String datemaxrep) {
+    public RandonneeeModel(String no_randonnee, String date, String lieu, int nombreMini, String dateMaxRep) {
         this.no_randonnee = no_randonnee;
         this.date = date;
         this.lieu = lieu;
-        this.nombremini = nombremini;
-        this.nombremax = nombremax;
-        this.datemaxrep = datemaxrep;
+        this.nombreMini = nombreMini;
+        this.dateMaxRep = dateMaxRep;
     }
 
     public String getNo_randonnee() {
@@ -57,27 +53,19 @@ public class RandonneeeModel {
     }
 
     public int getNombremini() {
-        return nombremini;
+        return nombreMini;
     }
 
     public void setNombremini(int nombremini) {
-        this.nombremini = nombremini;
-    }
-
-    public int getNombremax() {
-        return nombremax;
-    }
-
-    public void setNombremax(int nombremax) {
-        this.nombremax = nombremax;
+        this.nombreMini = nombremini;
     }
 
     public String getDatemaxrep() {
-        return datemaxrep;
+        return dateMaxRep;
     }
 
     public void setDatemaxrep(String datemaxrep) {
-        this.datemaxrep = datemaxrep;
+        this.dateMaxRep = datemaxrep;
     }
 
 }

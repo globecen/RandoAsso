@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RandoAsso</string>
+    <string name="AllRando">Les randonnées disponibles</string>
+    <string name="MyAllRando">Mes randonées</string>
 </resources>

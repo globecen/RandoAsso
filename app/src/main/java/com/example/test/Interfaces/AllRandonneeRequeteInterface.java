@@ -8,7 +8,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
-public interface RandonneeRequeteInterface {
-    @GET("/randonnees")
+public interface AllRandonneeRequeteInterface {
+    @GET("/backendAndroid/AfficheAllRando.php")
     Call<List<RandonneeeModel>> getAllRandonnee();
 }

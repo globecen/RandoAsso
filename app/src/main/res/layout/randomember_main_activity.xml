@@ -12,83 +12,58 @@
         android:background="@drawable/fond"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="58dp">
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        tools:layout_editor_absoluteX="41sp"
+        tools:layout_editor_absoluteY="58sp">
 
         <TextView
             android:id="@+id/membre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="70sp"
             android:autoLink="web"
-            android:text="Les randonnées disponibles"
+            android:text="@string/AllRando"
             android:textAppearance="@style/Theme.AppCompat.Dialog"
             android:textColorHint="#000"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/randonnee_recyclerview"
+            android:id="@+id/allRandonnee_recyclerview"
             android:layout_width="match_parent"
 
-            android:layout_height="378dp"
+            android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:scrollbarSize="50dp">
+            android:scrollbarSize="50sp">
 
         </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="Mes randonées"
+            android:layout_marginTop="60sp"
+            android:text="@string/MyAllRando"
             android:textAppearance="@style/Theme.AppCompat.Dialog"
             android:textColorHint="#000"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="5sp"
             android:background="@color/transparent"
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/randonnée2bis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:autoLink="web"
-                android:text="randonnée 1"
-                android:textAppearance="@style/Theme.AppCompat.Dialog"
-                android:textColorHint="#000"
-                android:textSize="22dp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myRandonnee_recyclerview"
+                android:layout_width="match_parent"
 
-            <TextView
-                android:id="@+id/randonée2bis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:autoLink="web"
-                android:text="randonnée 2"
-                android:textAppearance="@style/Theme.AppCompat.Dialog"
-                android:textColorHint="#000"
-                android:textSize="22dp" />
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:scrollbarSize="50sp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="\n"
-                android:textSize="5dp" />
-
+            </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
 
 

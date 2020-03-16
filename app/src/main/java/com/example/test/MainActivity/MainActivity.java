@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etEmail, etPassword;
     Button btnLogin;
     //Button btnCreer;
-    final String url_Login = "https://globecen.freeboxos.fr/androidConnection/login_user.php";
+    final String url_Login = "https://globecen.freeboxos.fr/backendAndroid/login_user.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
