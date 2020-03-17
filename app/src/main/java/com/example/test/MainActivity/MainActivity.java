@@ -1,7 +1,8 @@
 package com.example.test.MainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -20,7 +21,9 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
-
+    String norandonneur="";
+    final String regex = "login";
+    final String regex2 = "\\d";
     EditText etEmail, etPassword;
     Button btnLogin;
     //Button btnCreer;
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
         public class LoginUser extends AsyncTask<String, Void, String> {
-
+    String etat="";
             @Override
             protected String doInBackground(String... strings) {
                 String Email = strings[0];
@@ -66,8 +69,28 @@ public class MainActivity extends AppCompatActivity {
                     response = okHttpClient.newCall(request).execute();
                     if (response.isSuccessful()) {
                         String result = response.body().string();
-                        System.out.println(result);
-                        if (result.equalsIgnoreCase("login")) {
+
+                        final Pattern pattern2 = Pattern.compile(regex2);
+                        final Matcher matcher2 = pattern2.matcher(result);
+                        final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
+                        final Matcher matcher = pattern.matcher(result);
+                        while (matcher.find()) {
+                           // System.out.println("Full match: " + matcher.group(0));
+                           etat=etat+matcher.group(0);
+                            for (int i = 1; i <= matcher.groupCount(); i++) {
+                             //   System.out.println("Group " + i + ": " + matcher.group(i));
+                            }
+
+                            }
+                        while (matcher2.find()) {
+                            norandonneur=norandonneur+matcher2.group(0);
+                            System.out.println("Full match: " + matcher2.group(0));
+                            for (int i = 1; i <= matcher2.groupCount(); i++) {
+                                System.out.println("Group " + i + ": " + matcher2.group(i));
+                            }
+                        }
+                      //  System.out.println(result);
+                        if (etat.equals("login")) {
 
                             Intent i = new Intent(MainActivity.this,
                                     randomember_main_activity.class);
