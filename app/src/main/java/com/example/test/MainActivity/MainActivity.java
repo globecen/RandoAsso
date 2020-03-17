@@ -66,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
                     response = okHttpClient.newCall(request).execute();
                     if (response.isSuccessful()) {
                         String result = response.body().string();
+                        System.out.println(result);
                         if (result.equalsIgnoreCase("login")) {
+
                             Intent i = new Intent(MainActivity.this,
                                     randomember_main_activity.class);
                             startActivity(i);

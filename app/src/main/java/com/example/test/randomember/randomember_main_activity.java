@@ -40,9 +40,11 @@ public class randomember_main_activity extends AppCompatActivity {
         raondonnee_no=(TextView) findViewById(R.id.randonneeno);
         raondonnee_lieu=(TextView)findViewById(R.id.randonneelieu);
         Allrandonneee_recyclerview.setLayoutManager(new LinearLayoutManager(this));
-       // getALLRandoneeeResponse();
+        Myrandonneee_recyclerview.setLayoutManager(new LinearLayoutManager(this));
+        getALLRandoneeeResponse();
         getMyRandoneeeResponse();
-        this.configureOnClickRecyclerView();
+        this.configureOnClickAllRecyclerRandoView();
+        this.configureOnClickMyRandoRecyclerView();
 
     }
     private void getALLRandoneeeResponse() {
@@ -77,7 +79,6 @@ public class randomember_main_activity extends AppCompatActivity {
                 .baseUrl("https://globecen.freeboxos.fr")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        System.out.println("cc");
         MyRadonneeRequeteInterface requestInteface=retrofit.create(MyRadonneeRequeteInterface.class);
         Call<List<RandonneeeModel>> call=requestInteface.getMyAllRandonnee();
         System.out.println("Salut bg");
@@ -99,17 +100,34 @@ public class randomember_main_activity extends AppCompatActivity {
             }
         });
     }
-    private void configureOnClickRecyclerView(){
-        ItemClickSupport.addTo(Allrandonneee_recyclerview, R.layout.randomember_main_activity)
+    private void configureOnClickAllRecyclerRandoView(){
+        ItemClickSupport.addTo(Myrandonneee_recyclerview, R.layout.randomember_main_activity)
                 .setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
                     @Override
                     public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                         RandonneeeModel rando = radonneAdapter.getRando(position);
                         Toast.makeText(getApplicationContext(), "Vous avez cliquez sur la randonne n° : "+rando.getNo_randonnee(), Toast.LENGTH_SHORT).show();
                         //startActivity(new Intent(randomember_read_active_event_activity.class));
-                      //  Intent i = new Intent(randomember_main_activity.this,
-                               // randomember_read_active_event_activity.class);
-                       // i.putExtra("norando", rando.getNo_randonnee());
+                        //  Intent i = new Intent(randomember_main_activity.this,
+                        // randomember_read_active_event_activity.class);
+                        // i.putExtra("norando", rando.getNo_randonnee());
+                        //startActivity(i);
+                    }
+
+                });
+
+    }
+    private void configureOnClickMyRandoRecyclerView() {
+        ItemClickSupport.addTo(Allrandonneee_recyclerview, R.layout.randomember_main_activity)
+                .setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+                    @Override
+                    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                        RandonneeeModel rando = radonneAdapter.getRando(position);
+                        Toast.makeText(getApplicationContext(), "Vous avez cliquez sur la randonne n° : " + rando.getNo_randonnee(), Toast.LENGTH_SHORT).show();
+                        //startActivity(new Intent(randomember_read_active_event_activity.class));
+                        //  Intent i = new Intent(randomember_main_activity.this,
+                        // randomember_read_active_event_activity.class);
+                        // i.putExtra("norando", rando.getNo_randonnee());
                         //startActivity(i);
                     }
 
@@ -120,3 +138,4 @@ public class randomember_main_activity extends AppCompatActivity {
     }
 
 }
+
