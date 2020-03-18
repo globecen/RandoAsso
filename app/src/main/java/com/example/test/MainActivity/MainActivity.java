@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
                             Intent i = new Intent(MainActivity.this,
                                     randomember_main_activity.class);
+                            i.putExtra("norandonneur", norandonneur);
                             startActivity(i);
                         } else {
                             showToast("Email ou mot de passe incorrect !");
